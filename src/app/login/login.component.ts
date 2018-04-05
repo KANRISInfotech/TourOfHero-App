@@ -19,10 +19,10 @@ export class LoginComponent implements OnInit {
   
   loginaction():void{
     this.userService.login(this.user).subscribe((result)=>{
-      if(result.userName == "login_failed"){
+      if(result.getuserName() == "login_failed"){
         console.log('login failed');
       }else{
-        console.log('login successful : ' + result.userName);
+        console.log('login successful : ' + result.getuserName());
         this.router.navigate(['update']);
       }
     });
