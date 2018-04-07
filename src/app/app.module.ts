@@ -14,6 +14,11 @@ import { RegisterComponent } from './register/register.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { UpdateComponent } from './update/update.component';
+import { DetailsUploadComponent } from './details-upload/details-upload.component';
+import { FormUploadComponent } from './form-upload/form-upload.component';
+import { ListUploadComponent } from './list-upload/list-upload.component';
+import { UploadPageComponent } from './upload-page/upload-page.component';
+import {UploadFileService} from './upload-file.service';
 
 
 @NgModule({
@@ -22,7 +27,11 @@ import { UpdateComponent } from './update/update.component';
     AppComponent,
     HeroesComponent,
     RegisterComponent,
-    UpdateComponent
+    UpdateComponent,
+    DetailsUploadComponent,
+    FormUploadComponent,
+    ListUploadComponent,
+    UploadPageComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +39,7 @@ import { UpdateComponent } from './update/update.component';
     FormsModule,
     AppRoutingModule,
   ],
-  providers: [HeroesService,UserService,TitleService],
+  providers: [HeroesService,UserService,TitleService,UploadFileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

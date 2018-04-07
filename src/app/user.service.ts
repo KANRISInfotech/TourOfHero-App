@@ -9,19 +9,19 @@ export class UserService {
   constructor(private http:HttpClient) { }
 
 login(user:User):Observable<User>{
-  return this.http.post<User>('http://localhost:8080/getUser',JSON.stringify(user),{headers:{
+  return this.http.post<User>('api/getUser',JSON.stringify(user),{headers:{
     'Content-Type': 'application/json'
   }});
 }
 
 adduser(user:User):Observable<User>{
-  return this.http.post<User>('http://localhost:8080/addUser',JSON.stringify(user),{headers:{
+  return this.http.post<User>('api/addUser',JSON.stringify(user),{headers:{
     'Content-Type': 'application/json'
   }});
 }
 
 updateuser(user:User):Observable<User>{
-  return this.http.post<User>('http://localhost:8080/updateUser',JSON.stringify(user),{headers:{
+  return this.http.post<User>('api/updateUser',JSON.stringify(user),{headers:{
     'Content-Type': 'application/json'
   }});
 }
